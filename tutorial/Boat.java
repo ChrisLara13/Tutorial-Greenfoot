@@ -22,6 +22,22 @@ public class Boat extends Actor
     {
         int x = super.getX();
         int y = super.getY();
-        this.setLocation(x + 1, y);
+        if(Greenfoot.isKeyDown("w"))
+        {
+            y--;
+        }
+        else if(Greenfoot.isKeyDown("s"))
+        {
+            y++;
+        }
+        else if(Greenfoot.isKeyDown("a"))
+        {
+            x--;
+        }
+        else if(Greenfoot.isKeyDown("d"))
+        {
+            x++;
+        }
+        this.setLocation(x, y);
     }
 }
